@@ -7,4 +7,4 @@ Open Command Palette and type '__instacode__'. Press __Enter__ and the link will
 
 ## Compatibility
 
-Tested for compatibility in Sublime Text 3.
+This branch has compatibility with Sublime Text 2.

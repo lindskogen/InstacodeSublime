@@ -13,7 +13,7 @@ class InstacodeCommand(sublime_plugin.TextCommand):
         self.submit_code(text, syntax)
 
     def submit_code(self, text, syntax):
-        url = "http://instacod.es/?post_code=" + urllib.quote(text) + "&post_lang=" + urllib.quote(syntax)
+        url = "http://instacod.es/?post_code=" + urllib.quote(text.encode('utf8')) + "&post_lang=" + urllib.quote(syntax.encode('utf8'))
         webbrowser.open(url)
 
     def clean_syntax(self, syntax):
