@@ -2,7 +2,7 @@ import sublime
 import re
 import sublime_plugin
 import webbrowser
-import urllib.parse
+import urllib
 
 
 class InstacodeCommand(sublime_plugin.TextCommand):
@@ -13,7 +13,7 @@ class InstacodeCommand(sublime_plugin.TextCommand):
         self.submit_code(text, syntax)
 
     def submit_code(self, text, syntax):
-        url = "http://instacod.es/?post_code=" + urllib.parse.quote(text) + "&post_lang=" + urllib.parse.quote(syntax)
+        url = "http://instacod.es/?post_code=" + urllib.quote(text) + "&post_lang=" + urllib.quote(syntax)
         webbrowser.open(url)
 
     def clean_syntax(self, syntax):
